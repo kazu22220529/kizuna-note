@@ -77,6 +77,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
       setEvents(saved.events);
       setNotifications(saved.notifications);
       setAttendance(saved.attendance);
+      setPhotos(saved.photos ?? SEED_PHOTOS);
       setSettings(saved.settings);
     }
     setReady(true);
@@ -89,9 +90,10 @@ export function AppProvider({ children }: { children: ReactNode }) {
       events,
       notifications,
       attendance,
+      photos,
       settings,
     });
-  }, [ready, page, events, notifications, attendance, settings]);
+  }, [ready, page, events, notifications, attendance, photos, settings]);
 
   const unreadCount = notifications.filter((item) => !item.read).length;
 

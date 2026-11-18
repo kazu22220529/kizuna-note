@@ -2,6 +2,7 @@ import type {
   AppNotification,
   AttendanceRecord,
   NotificationSettings,
+  Photo,
   TeamEvent,
 } from "@/lib/types";
 
@@ -12,6 +13,7 @@ export interface PersistedState {
   events: TeamEvent[];
   notifications: AppNotification[];
   attendance: Record<string, AttendanceRecord>;
+  photos: Photo[];
   settings: NotificationSettings;
 }
 

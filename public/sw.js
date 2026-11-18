@@ -1,5 +1,13 @@
-const CACHE_NAME = "hinode-kickers-v1";
-const PRECACHE = ["/", "/manifest.webmanifest", "/logo.jpg"];
+const CACHE_NAME = "hinode-kickers-v2";
+const PRECACHE = [
+  "/",
+  "/manifest.webmanifest",
+  "/logo.jpg",
+  "/icons/icon-192.png",
+  "/icons/icon-512.png",
+  "/icons/icon-512-maskable.png",
+  "/icons/apple-touch-icon.png",
+];
 
 self.addEventListener("install", (event) => {
   event.waitUntil(
